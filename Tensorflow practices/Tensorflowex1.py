@@ -84,4 +84,13 @@ X_testset= np.array([
 X_testn = normlization (X_testset)
 predictions = model.predict(X_testn)
 print ("predictions = \n", predictions)
+# %%to make sense the prediction adding threshold
+yhat = np.zeros_like(predictions)
+for i in range (len(predictions)):
+    if predictions[i] >= 0.5:
+        yhat[i] = 1
+    else:
+        yhat[i] = 0
+print(f"decisions = \n{yhat}")
+
 # %%

@@ -77,4 +77,11 @@ W2, b2 = model.get_layer("Layer2").get_weights()
 print(f'W1:\n', W1, "\n b1:", b1)
 print(f'W2:\n', W2, "\n b2:", b2)
 
+# %%TEst cases for some predictions
+X_testset= np.array([
+    [200,13.9],
+    [200,17]])
+X_testn = normlization (X_testset)
+predictions = model.predict(X_testn)
+print ("predictions = \n", predictions)
 # %%
